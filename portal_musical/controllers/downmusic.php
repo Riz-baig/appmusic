@@ -25,9 +25,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Comprar (vaciar cesta)
+    
     if (isset($_POST['comprar'])) {
-        $mensaje = "Compra realizada correctamente.";
-        $_SESSION['cesta'] = [];
+
+        if (!empty($_SESSION['cesta'])) {
+            header("Location: pago.php"); // Voy a pasarela
+            exit();
+        }
     }
 }
 
