@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Protección opcional
 if (!isset($_SESSION['customerId'])) {
     header("Location: ../index.php");
     exit();

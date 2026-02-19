@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Si quieres puedes proteger acceso
 if (!isset($_SESSION['customerId'])) {
     header("Location: ../index.php");
     exit();
@@ -16,7 +15,7 @@ if (!isset($_SESSION['customerId'])) {
 </head>
 <body>
 
-<h1>✅ Pago realizado correctamente</h1>
+<h1>Pago realizado correctamente</h1>
 
 <p>Tu compra ha sido procesada con éxito.</p>
 
